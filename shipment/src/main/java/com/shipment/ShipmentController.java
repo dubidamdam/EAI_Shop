@@ -19,7 +19,7 @@ public class ShipmentController {
     public String getShipment(@Valid @RequestBody ShipmentRequest shipmentRequest) {
         Shipment shipment = new Shipment();
         shipment.setTrackingId(UUID.randomUUID().toString());
-        shipment.setId(shipmentRequest.productID);
+        shipment.setProductID(shipmentRequest.productID);
         shipmentRepository.save(shipment);
 
         return shipmentRepository.findAll().get(0).getTrackingId();
