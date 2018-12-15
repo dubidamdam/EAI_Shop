@@ -16,7 +16,7 @@ public class InventoryController {
     private InventoryRepository inventoryRepository;
 
     @PostMapping("/addProduct")
-    public boolean takeFromInventory(@Valid @RequestBody AddProductRequest addProductRequest) {
+    public boolean addNewProduct(@Valid @RequestBody AddProductRequest addProductRequest) {
         //System.out.println("triggered");
         //speichert alle übergebenen Produkte in die DB
         for (int i = 0; i < addProductRequest.myList.size(); i++) {
