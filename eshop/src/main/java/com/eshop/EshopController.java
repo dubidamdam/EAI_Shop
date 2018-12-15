@@ -57,7 +57,6 @@ public class EshopController {
     }
 
     //addproduct mit json
-    //@PostMapping("/eshop/addproduct")
     private boolean addAProduct(Jsonconv json) {
         Long productID1 = json.getQueryResult().getParameters().getProductID();
         Long price1 = json.getQueryResult().getParameters().getPrice();
@@ -83,9 +82,8 @@ public class EshopController {
         return true;
     }
 
-    //startet Business Logik von Checkout
 
-    //@PostMapping(value = "/eshop/checkout")
+    //startet Business Logik von Checkout
     private boolean handleCheckout(Jsonconv json) {
         //handelt Dialogflow Jsonobjekt -> http://www.jsonschema2pojo.org/ genutzt um aus dem JSON Java Klassen generieren
         String productName = json.getQueryResult().getParameters().getProductName();
@@ -119,6 +117,7 @@ public class EshopController {
 
         //generiert ShipmentRequest
         ShipmentRequest shipmentRequest = new ShipmentRequest();
+        shipmentRequest.productID = productID;
 
         //generiert inventoryRequest
         // Fügt Item der AL in InventoryRequest und somit der DB hinzu
