@@ -1,0 +1,200 @@
+{
+  "id": "a7952c24-a0d3-4df7-ae66-1a36944a364c",
+  "name": "get-order",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "orderItem",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "91326214-e5de-4089-8ffe-0e292636f56b",
+          "required": false,
+          "dataType": "@sys.number-integer",
+          "name": "amount",
+          "value": "$amount",
+          "isList": false
+        },
+        {
+          "id": "3d6359e8-409d-4650-afc0-700e4db29af2",
+          "required": false,
+          "dataType": "@sys.number-integer",
+          "name": "productID",
+          "value": "$productID",
+          "isList": false
+        },
+        {
+          "id": "458ef388-fc6f-41eb-b11b-f603363dbdb0",
+          "required": false,
+          "dataType": "@productName",
+          "name": "productName",
+          "value": "$productName",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Since I am a smart-ass Robot, I ordered $amount of Product  $productName for  you. Anything else human?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1544886367,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "bfe2ac6b-15b7-44b9-a794-643136074a5c",
+      "data": [
+        {
+          "text": "I order "
+        },
+        {
+          "text": "amount",
+          "alias": "amount",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        },
+        {
+          "text": " of Product "
+        },
+        {
+          "text": "productName",
+          "alias": "productName",
+          "meta": "@productName",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1544880691,
+      "isAuto": false
+    },
+    {
+      "id": "a962e84b-ebaa-4f70-9076-72d6369abbb4",
+      "data": [
+        {
+          "text": "I order "
+        },
+        {
+          "text": "amount",
+          "alias": "amount",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        },
+        {
+          "text": " of Product "
+        },
+        {
+          "text": "productID",
+          "alias": "productID",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1544877685,
+      "isAuto": false
+    },
+    {
+      "id": "9ab7908b-81de-40da-afee-ef93e7dbcb07",
+      "data": [
+        {
+          "text": "I would like "
+        },
+        {
+          "text": "amount",
+          "alias": "amount",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        },
+        {
+          "text": " of Product "
+        },
+        {
+          "text": "productID",
+          "alias": "productID",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1544877685,
+      "isAuto": false
+    },
+    {
+      "id": "7aca0c52-6e42-4369-a7e6-5c181c020f34",
+      "data": [
+        {
+          "text": "I would like "
+        },
+        {
+          "text": "amount",
+          "alias": "amount",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "productID",
+          "alias": "productID",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1544877685,
+      "isAuto": false
+    },
+    {
+      "id": "9a821640-ab19-41f6-8e11-a2f58dc46f87",
+      "data": [
+        {
+          "text": "I order "
+        },
+        {
+          "text": "amount",
+          "alias": "amount",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "productID",
+          "alias": "productID",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1544877685,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}

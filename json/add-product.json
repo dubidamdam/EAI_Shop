@@ -1,0 +1,118 @@
+{
+  "id": "4aee1c52-a87f-4dcd-ac27-681c6be2a276",
+  "name": "add-product",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "3d6f9b5b-ebeb-4182-9ae1-8f01e4845430",
+          "required": false,
+          "dataType": "@sys.number-integer",
+          "name": "price",
+          "value": "$price",
+          "isList": false
+        },
+        {
+          "id": "079bb321-9f96-4406-b36c-02756f3f8ff0",
+          "required": false,
+          "dataType": "@productName",
+          "name": "productName",
+          "value": "$productName",
+          "isList": false
+        },
+        {
+          "id": "4c31719c-7fa7-4da7-9025-aabbeae48892",
+          "required": false,
+          "dataType": "@sys.number-integer",
+          "name": "storedAmount",
+          "value": "$storedAmount",
+          "isList": false
+        },
+        {
+          "id": "e32b0bfd-f0f0-40d2-9850-25e3618c6221",
+          "required": false,
+          "dataType": "@sys.number-integer",
+          "name": "productID",
+          "value": "$productID",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Done. Poor human adds $productName to his Eshop."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1544886678,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "24675d22-ceef-4ee5-922d-9f1cee792812",
+      "data": [
+        {
+          "text": "I want to add a porduct. It has the product ID "
+        },
+        {
+          "text": "productID",
+          "alias": "productID",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        },
+        {
+          "text": ", the price "
+        },
+        {
+          "text": "price",
+          "alias": "price",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        },
+        {
+          "text": ", the product name "
+        },
+        {
+          "text": "productName",
+          "alias": "productName",
+          "meta": "@productName",
+          "userDefined": true
+        },
+        {
+          "text": " and the Amount "
+        },
+        {
+          "text": "storedAmount",
+          "alias": "storedAmount",
+          "meta": "@sys.number-integer",
+          "userDefined": true
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1544877918,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}
