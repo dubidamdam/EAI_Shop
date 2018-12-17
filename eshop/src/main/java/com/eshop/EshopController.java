@@ -85,9 +85,26 @@ public class EshopController {
 
     //startet Business Logik von Checkout
     private boolean handleCheckout(Jsonconv json) {
+        Long productID1 = null;
         //handelt Dialogflow Jsonobjekt -> http://www.jsonschema2pojo.org/ genutzt um aus dem JSON Java Klassen generieren
         String productName = json.getQueryResult().getParameters().getProductName();
-        Long productID1 = productRepository.findByProductName(productName).getProductID(); //product ID wird anhand des namens in DB geholt
+        //System.out.println(productName);
+        Product p1 = new Product();
+        p1.setProductName(productName);
+        //System.out.println(productName+"\n");
+        //String asd =productRepository.findAll().get(7).getProductName();
+        //System.out.println(asd);
+        //System.out.println(productName);
+        for(int i = 0; i < productRepository.count(); i++) {
+            String asd =productRepository.findAll().get(i).getProductName();
+            if(productRepository.findAll().get(i).getProductName().equals(asd)) {
+                 //System.out.println("hello");
+                 productID1 = productRepository.findAll().get(i).getProductID();
+             }
+         }
+
+        System.out.println(productID1);
+
         //System.out.println(productID1);
         //Long productID1 = json.getQueryResult().getParameters().getProductID(); -> product ID direkt aus dialogflow
         Long amount1 = json.getQueryResult().getParameters().getAmount();
